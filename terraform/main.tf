@@ -11,13 +11,13 @@ terraform {
 provider "docker" {}
 
 resource "docker_image" "mega903" {
-  name         = "mega903:latest"
+  name         = var.docker_image_name
   keep_locally = true
 }
 
 resource "docker_container" "mega903" {
   image = docker_image.mega903.latest
-  name  = "mega903"
+  name  = var.docker_container_name
   ports {
     internal = 80
     external = 80
