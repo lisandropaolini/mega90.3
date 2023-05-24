@@ -16,10 +16,10 @@ resource "docker_image" "mega903" {
 }
 
 resource "docker_container" "mega903" {
-  image = docker_image.mega903.latest
+  image = docker_image.mega903.name
   name  = var.docker_container_name
   ports {
     internal = 80
-    external = 80
+    external = 8080
   }
 }
