@@ -2,6 +2,7 @@
 
 	docker build -t mega903:1.0.1 .
 	docker run -d -p 80:80 mega903:1.0.1
+	docker tag mega903:1.0.1 lisandropaolini/mega903:1.0.1
 
 
 
